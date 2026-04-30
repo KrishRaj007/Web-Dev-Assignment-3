@@ -1,6 +1,6 @@
 import StudentRow from "./StudentRow";
 
-function StudentTable({ students, updateScore }) {
+function StudentTable({ students, updateScore, deleteStudent }) {
   return (
     <table>
       <thead>
@@ -17,7 +17,8 @@ function StudentTable({ students, updateScore }) {
             key={student.id}
             student={student}
             updateScore={updateScore}
-          />
+            deleteStudent={deleteStudent}
+        />
         ))}
       </tbody>
     </table>

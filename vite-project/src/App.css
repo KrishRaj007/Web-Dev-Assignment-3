@@ -1,26 +1,137 @@
+/* Page */
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to right, #eef2f3, #dfe9f3);
+}
+
+/* Container */
 .container {
   width: 60%;
-  margin: auto;
+  margin: 40px auto;
   text-align: center;
 }
 
+/* Header */
+h1 {
+  color: #333;
+  margin-bottom: 20px;
+  transition: 0.3s;
+}
+
+h1:hover {
+  transform: scale(1.05);
+}
+
+/* Form Card */
+form {
+  background: white;
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  margin-bottom: 25px;
+  transition: 0.3s;
+}
+
+form:hover {
+  transform: translateY(-3px);
+}
+
+/* Inputs */
+input {
+  padding: 10px;
+  margin: 6px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  transition: 0.25s;
+}
+
+input:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0,123,255,0.5);
+  outline: none;
+  transform: scale(1.03);
+}
+
+/* Buttons */
+button {
+  padding: 8px 14px;
+  margin: 5px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  background: #007bff;
+  color: white;
+  transition: 0.3s;
+}
+
+/* Button Hover */
+button:hover {
+  background: #0056b3;
+  transform: scale(1.08);
+}
+
+/* Delete Button Special */
+td button {
+  background: #dc3545;
+}
+
+td button:hover {
+  background: #a71d2a;
+}
+
+/* Table Card */
 table {
   width: 100%;
   border-collapse: collapse;
-  margin-top: 20px;
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
 }
 
-th, td {
-  border: 1px solid black;
-  padding: 10px;
+/* Header */
+th {
+  background: #007bff;
+  color: white;
+  padding: 12px;
 }
 
-input {
-  padding: 5px;
-  margin: 5px;
+/* Cells */
+td {
+  padding: 12px;
+  border-bottom: 1px solid #eee;
+  transition: 0.2s;
 }
 
-button {
-  padding: 6px 10px;
-  cursor: pointer;
+/* Row Hover Effect */
+tr:hover td {
+  background: #f5f9ff;
+  transform: scale(1.01);
+}
+
+/* Pass / Fail */
+.pass {
+  color: green;
+  font-weight: bold;
+}
+
+.fail {
+  color: red;
+  font-weight: bold;
+}
+
+/* Smooth Fade In */
+.container {
+  animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

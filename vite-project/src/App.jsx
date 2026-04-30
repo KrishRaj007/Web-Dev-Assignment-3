@@ -15,7 +15,7 @@ function App() {
   const updateScore = (id, newScore) => {
     const updated = students.map((student) =>
       student.id === id
-        ? { ...student, score: Number(newScore) }
+        ? { ...student, score: newScore }
         : student
     );
     setStudents(updated);
@@ -31,11 +31,15 @@ function App() {
     setStudents([...students, newStudent]);
   };
 
+  const deleteStudent = (id) => {
+  setStudents(students.filter((s) => s.id !== id));
+};
+
   return (
     <div className="container fade-in">
       <Header />
       <AddStudentForm addStudent={addStudent} />
-      <StudentTable students={students} updateScore={updateScore} />
+      <StudentTable students={students} updateScore={updateScore} deleteStudent={deleteStudent} />
     </div>
   );
 }

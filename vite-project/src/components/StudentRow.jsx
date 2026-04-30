@@ -1,5 +1,5 @@
-function StudentRow({ student, updateScore }) {
-  const isPass = student.score >= 40;
+function StudentRow({ student, updateScore, deleteStudent }) {
+  const isPass = Number(student.score) >= 40;
 
   return (
     <tr>
@@ -13,8 +13,10 @@ function StudentRow({ student, updateScore }) {
         />
       </td>
 
-      <td style={{ color: isPass ? "green" : "red" }}>
-        {isPass ? "Pass" : "Fail"}
+      <td>{isPass ? "Pass" : "Fail"}</td>
+
+      <td>
+        <button onClick={() => deleteStudent(student.id)}>Delete</button>
       </td>
     </tr>
   );
