@@ -7,10 +7,18 @@ function StudentRow({ student, updateScore, deleteStudent }) {
 
       <td>
         <input
-          type="number"
-          value={student.score}
-          onChange={(e) => updateScore(student.id, e.target.value)}
-        />
+  type="text"
+  placeholder="Enter marks"
+  value={student.score}
+  onChange={(e) => {
+    const value = e.target.value;
+
+    
+    if (value === "" || /^[0-9]+$/.test(value)) {
+      updateScore(student.id, value);
+    }
+  }}
+/>
       </td>
 
       <td>{isPass ? "Pass" : "Fail"}</td>
