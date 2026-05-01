@@ -8,6 +8,7 @@ function StudentTable({ students, updateScore, deleteStudent }) {
           <th>Name</th>
           <th>Score</th>
           <th>Status</th>
+          <th></th> {/* This empty cell extends the blue header to the end */}
         </tr>
       </thead>
 
@@ -18,7 +19,7 @@ function StudentTable({ students, updateScore, deleteStudent }) {
             student={student}
             updateScore={updateScore}
             deleteStudent={deleteStudent}
-        />
+          />
         ))}
       </tbody>
     </table>

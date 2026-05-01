@@ -67,16 +67,18 @@ table {
 }
 
 
+/* Update these sections in your existing CSS */
 th {
-  background: #3b82f6;
-  padding: 12px;
-  font-weight: 500;
+  background: #3b82f6; /* */
+  padding: 12px; /* */
+  font-weight: 500; /* */
+  text-align: left; /* Ensures text aligns with the data below */
 }
 
-
 td {
-  padding: 12px;
-  border-bottom: 1px solid #334155;
+  padding: 12px; /*[cite: 1] */
+  border-bottom: 1px solid #334155; /*[cite: 1] */
+  text-align: left;
 }
 
 
